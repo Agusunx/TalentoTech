@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <title>Alumno</title>
+</head>
+
+<body>
+    <div class="encabezado">
+        <div id="usuario">
+            <span>Usuario:Agustina</span>
+        </div>
+
+        <div id="nombre-usuario">
+            <span>Alumno:Ledesma Agustina</span>
+        </div>
+
+        <div id="tituloPrincipal">
+            <img id="logo" src="imagen/logo5.png" alt="Logo">
+            <h1>CodeRobotik</h1>
+        </div>
+
+
+        <nav>
+            <ul>
+                <li> <a href="index.html">Volver a inicio</a> </li>
+            </ul>
+        </nav>
+        <script>
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var username = urlParams.get('usuario');
+
+            document.addEventListener('DOMContentLoaded', function () {
+                if (username) {
+                    document.getElementById('welcome-message').textContent = '¡Bienvenido, ' + username + '!';
+                } else {
+                    document.getElementById('welcome-message').textContent = 'Usuario no especificado';
+                }
+            });
+        </script>
+
+
+
+        <h1 id="welcome-message"></h1>
+
+        <nav id="cuadros">
+            <a href="#horarios" class="cuadro">Mis clases</a>
+            <a href="Seminario.html" class="cuadro">Ver seminario actual</a>
+            <a href="#" class="cuadro">Calificaciones</a>
+            <a href="#" class="cuadro">Calendario</a>
+        </nav>
+
+
+        <h2 id="horarios">HORARIO DE CLASES</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Docente</th>
+                    <th>Materia</th>
+                    <th>Observaciones</th>
+                    <th>Asistencia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2023-11-07</td>
+                    <td>10:00 AM</td>
+                    <td>Profesor Juan</td>
+                    <td>Matemáticas</td>
+                    <td>Clase de repaso para el examen</td>
+                    <td> <button class="cancelar-btn">No asistiré</button></td>
+                </tr>
+                <tr>
+                    <td>2023-11-08</td>
+                    <td>2:30 PM</td>
+                    <td>Profesora Maria</td>
+                    <td>Ciencias</td>
+                    <td>Experimento en el laboratorio</td>
+                    <td> <button class="cancelar-btn">No asistiré</button></td>
+                </tr>
+                <tr>
+                    <td>2023-18-08</td>
+                    <td>12:30 PM</td>
+                    <td>Profesora Sofia</td>
+                    <td>Biotecnologia</td>
+                    <td>
+                    <td><button class="cancelar-btn">No asistiré</button></td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2023-21-08</td>
+                    <td>16:30 PM</td>
+                    <td>Profesor Pablo</td>
+                    <td>Robotica</td>
+                    <td></td>
+                    <td><button class="cancelar-btn">No asistiré</button></td>
+                </tr>
+                <tr>
+                    <td>2023-30-08</td>
+                    <td>15:30 PM</td>
+                    <td>Profesora Fernanda</td>
+                    <td>Programación</td>
+                    <td> Examen</td>
+                    <td><button class="cancelar-btn">No asistiré</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <footer id="seccion6">
+            <h5>Contacto</h5>
+            <img src="imagen/logo5.png" alt="logo" width="80px"><br>
+            <span>© Agustin Navarro</span> <br>
+            <span>Para más información, contáctanos: </span><br>
+            <span>Email: unahur@gmail.com</span><br>
+            <span>Teléfono: 123-456-789</span><br>
+
+
+        </footer>
+
+</body>
+
+</html>

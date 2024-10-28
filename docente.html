@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Docente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="encabezado">
+
+        <div id="usuario">
+            <span>Usuario:Rodrigo</span>
+        </div>
+        <div id="nombre-usuario">
+            <span>Docente:Cianculli Rodrigo</span>
+        </div>
+
+        <div id="tituloPrincipal">
+            <img id="logo" src="imagen/logo5.png" alt="Logo">
+            <h1>CodeRobotik</h1>
+        </div>
+
+        <script>
+
+            var urlParams = new URLSearchParams(window.location.search);
+            var username = urlParams.get('usuario');
+
+            document.addEventListener('DOMContentLoaded', function () {
+                if (username) {
+                    document.getElementById('welcome-message').textContent = '¡Bienvenido, ' + username + '!';
+                } else {
+                    document.getElementById('welcome-message').textContent = 'Usuario no especificado';
+                }
+            });
+        </script>
+        <nav>
+            <ul>
+                <li> <a href="index.html">Volver a inicio</a> </li>
+            </ul>
+        </nav>
+        <h1 id="welcome-message"></h1>
+
+        <nav id="cuadros">
+            <a href="#clase" class="cuadro">Mis clases</a>
+            <a href="" class="cuadro">Alumnos</a>
+            <a href="#" class="cuadro">Calificaciones</a>
+            <a href="#" class="cuadro">Comisiones</a>
+        </nav>
+
+        <h2 id="clase">MIS CLASES</h2>
+
+        <div class="contenedor">
+            <div class="dia lunes">
+                <h3>Lunes</h3>
+                <p><b>Curso:</b> Matemáticas</p>
+                <p><b>Aula:</b> 2</p>
+                <p><b>Observaciones: </b>Clase de repaso.</p>
+            </div>
+            <div class="dia martes">
+                <h3>Martes</h3>
+                <p><b>Curso:</b> Ciencias</p>
+                <p><b>Aula:</b> 102</p>
+                <p><b>Observaciones: </b>Experimento en el laboratorio.</p>
+            </div>
+            <div class="dia miercoles">
+                <h3>Miercoles</h3>
+                <p><b>Curso:</b> Software</p>
+                <p><b>Aula:</b> 1</p>
+                <p><b>Observaciones: </b>
+            </div>
+            <div class="dia jueves">
+                <h3>Jueves</h3>
+                <p><b>Curso:</b> Biotecnologia</p>
+                <p><b>Aula:</b> 12</p>
+                <p><b>Observaciones:</b> Experimento</p>
+            </div>
+            <div class="dia viernes">
+                <h3>Viernes</h3>
+                <p><b>Curso:</b> Robotica</p>
+                <p><b>Aula:</b> 32</p>
+                <p><b>Observaciones:</b>últ. clase </p>
+            </div>
+
+
+            <footer id="seccion6">
+                <h5>Contacto</h5>
+                <img src="imagen/logo5.png" alt="logo" width="80px"><br>
+                <span>© Agustin Navarro</span> <br>
+                <span>Para más información, contáctanos: </span><br>
+                <span>Email: unahur@gmail.com</span><br>
+                <span>Teléfono: 123-456-789</span><br>
+
+
+            </footer>
+
+
+</body>
+
+</html>

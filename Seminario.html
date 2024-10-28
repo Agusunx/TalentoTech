@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Seminario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li> <a href="index.html">Volver a inicio</a> </li>
+        </ul>
+    </nav>
+
+
+    <div class="formulario">
+        <h2><b>RESERVAR ASISTENCIA</b></h2>
+        <form onsubmit="return validarFormulario()">
+            <label for="charla">Charla:</label>
+            <select id="charla" name="charla">
+                <option value="charla1">Robotica con Arduino 1</option>
+                <option value="charla2">Robótica Biomimética</option>
+                <option value="charla3">Inteligencia Artificial y programación</option>
+            </select><br>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha"><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora"><br>
+
+            <label for="email">Email del Alumno:</label>
+            <input type="email" id="email" name="email"><br>
+
+            <label for="observaciones">Observaciones:</label><br>
+            <textarea id="observaciones" name="observaciones" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Reservar cupo">
+        </form>
+    </div>
+
+
+
+    <script>
+        function validarFormulario() {
+            var charla = document.getElementById("charla").value;
+            var fecha = document.getElementById("fecha").value;
+            var hora = document.getElementById("hora").value;
+            var email = document.getElementById("email").value;
+            var observaciones = document.getElementById("observaciones").value;
+
+            if (charla === "" || fecha === "" || hora === "" || email === "" || observaciones === "") {
+                alert("Verifique los datos del formulario. Todos los campos son obligatorios.");
+                return false;
+            } else {
+                alert("Asistencia reservada correctamente.");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+<footer id="seccion6">
+    <h5>Contacto</h5>
+    <img src="imagen/logo5.png" alt="logo" width="80px"><br>
+    <span>© Agustin Navarro</span> <br>
+    <span>Para más información, contáctanos: </span><br>
+    <span>Email: unahur@gmail.com</span><br>
+    <span>Teléfono: 123-456-789</span><br>
+
+
+</footer>
+</body>
+
+</html>
